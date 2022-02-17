@@ -29,6 +29,7 @@ const Navbar = () => {
 						<Link to='/' className="Navbar__list--section ">Blog</Link>
 						<Link to='/' className="Navbar__list--section">Contactanos</Link>
 						<Link to='/' className="Navbar__list--section ">Nosotros</Link>
+						<Link to='/registre' className="Navbar__list--section ">sign in</Link>
 						{/* <Link to='/' className="Navbar__list--section Navbar__list--res">inicia sesion</Link> */}
 					</ul>
 				</div>

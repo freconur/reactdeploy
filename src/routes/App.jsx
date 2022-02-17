@@ -5,8 +5,8 @@ import Home from '../pages/Home'
 import Cojin from '../pages/Cojin';
 import Polos from '../pages/Polos';
 import Tazas from '../pages/Tazas';
-// import ModalProduct from '../Modals/ModalProduct';
 import ProductId from '../components/ProductId';
+import CreateAccount from '../pages/CreateAccount';
 
 const App = () => {
   return (
@@ -16,6 +16,7 @@ const App = () => {
           <Route exact path="/" element={<Home/>} />
           {/* <Route exact path="/modal" element={<ModalProduct/>} /> */}
           <Route exact path="/polos" element={<Polos/>} />
+          <Route exact path="/registre" element={<CreateAccount/>} />
           <Route exact path="/tazas" element={<Tazas/>} />
           <Route exact path="/cojin" element={<Cojin/>} />
           <Route exact path="/cojin/:productId" element={<ProductId/>} />
