@@ -1,0 +1,33 @@
+@media (min-width: 650px) {
+    .Menu {
+        display: none;
+    }
+
+}
+@media (max-width: 650px) {
+    .Navbar__list--section {
+        display: none;
+    }
+    .Navbar__list--res {
+        display: block;
+    }
+    
+    .Navbar__menuBurger {
+        display: flex;
+    }
+    .Menu {}
+
+}
+@media (max-width: 420px) {
+    .Navbar__list--res {
+        display: none;
+    }
+    .Navbar__container-logo {
+        /* height: 100%; */
+        width: initial;
+    }
+    .Navbar__container {
+        /* justify-content: center; */
+    }   
+
+}
