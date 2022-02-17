@@ -18,7 +18,7 @@ const Tazas = () => {
       setProduct(docs);
     };
     getProduct();
-  })
+  },[]);
 
   return (
     <>
