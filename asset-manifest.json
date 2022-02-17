@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/reactdeploy/static/css/main.a9e5b62e.css",
-    "main.js": "/reactdeploy/static/js/main.b0ff36f6.js",
+    "main.js": "/reactdeploy/static/js/main.4d5b9786.js",
     "static/media/header-image.jpg": "/reactdeploy/static/media/header-image.5b2f30f15d25b9da1916.jpg",
     "static/media/background.png": "/reactdeploy/static/media/background.4a00233f3602b18fca44.png",
     "static/media/waliky-logo.png": "/reactdeploy/static/media/waliky-logo.907c9d967bf8b90436b0.png",
@@ -15,10 +15,10 @@
     "index.html": "/reactdeploy/index.html",
     "static/media/bars-solid.svg": "/reactdeploy/static/media/bars-solid.0671bc5b9388995c7446ee5e448f585d.svg",
     "main.a9e5b62e.css.map": "/reactdeploy/static/css/main.a9e5b62e.css.map",
-    "main.b0ff36f6.js.map": "/reactdeploy/static/js/main.b0ff36f6.js.map"
+    "main.4d5b9786.js.map": "/reactdeploy/static/js/main.4d5b9786.js.map"
   },
   "entrypoints": [
     "static/css/main.a9e5b62e.css",
-    "static/js/main.b0ff36f6.js"
+    "static/js/main.4d5b9786.js"
   ]
 }
