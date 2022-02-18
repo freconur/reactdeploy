@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import app from "../firebase/firebase.config"
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import ProductCard from '../components/ProductCard';
 import "../styles/productContainer.css"
 import '../styles/res/productContainer_res.css'
-const db = getFirestore();
+const db = getFirestore(app);
 const Tazas = () => {
 
   const [product, setProduct] = useState([]);

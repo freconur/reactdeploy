@@ -1,10 +1,11 @@
-import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import React, {useState, useEffect} from 'react'
+import app from "../firebase/firebase.config"
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import ProductCard from '../components/ProductCard'
 import "../styles/productContainer.css";
 import '../styles/res/productContainer_res.css'
 import PageLoading from './PageLoading'
-const db = getFirestore();
+const db = getFirestore(app);
 const Polos = () => {
 
   const [product, setProduct] = useState([])
