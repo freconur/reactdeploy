@@ -1,25 +1,35 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const CreateAccount = () => {
+  
+  const [error, setError] = useState();
   const [user, setUser] = useState({
     email: '',
     password:''
   });
-    const {create} = useAuth();
+    const navigate = useNavigate()
+    const {signin} = useAuth();
 
     const handleChange = ({target:{name, value}}) => {
     setUser({...user, [name]:value})
     // console.log(e.target.name, e.target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    create(user.email, user.password)
+    try {
+      await signin(user.email, user.password)
+      navigate("/user");
+    } catch (error) {
+      setError('Server Error')      
+    }
   }
   return (
     <div>
+      {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
         <div>
           <label>Correo</label>
@@ -33,7 +43,7 @@ const CreateAccount = () => {
         <div>
           <label>contrasenia</label>
           <input 
-          placeholder='ingresa tu correo' 
+          placeholder='***********' 
           type='password'
           name="password"
           onChange={handleChange}
@@ -41,6 +51,8 @@ const CreateAccount = () => {
         </div>
         <button >Registrate</button>
       </form>
+
+      <div></div>
     </div>
   )
 }

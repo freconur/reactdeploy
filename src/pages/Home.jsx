@@ -1,16 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Category from '../components/Category';
 import Header from '../components/Header';
 import { useAuth } from '../context/AuthContext';
 import '../styles/Home.css';
 import '../styles/res/Home_res.css';
 const Home = () => {
-
   const {user} = useAuth();
-  console.log(user);
-
-  return (
+  const userHome = user?.email
+  // console.log('estado:',userHome)
+ 
+  return ( 
     <div className="Home">
+      <Link to="user">
+      {/* {user?.email} */}
+         { userHome ?
+          <p> bienvenido {userHome}</p> : "" }
+      </Link>
       <div className="Home__container">
         <Header />
         <Category />
