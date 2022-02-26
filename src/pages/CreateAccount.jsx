@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, Link } from 'react-router-dom';
+import '../styles/CreateAccount.css'
 
 const CreateAccount = () => {
   
@@ -28,31 +28,39 @@ const CreateAccount = () => {
     }
   }
   return (
-    <div>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Correo</label>
-          <input 
-          placeholder='ingresa tu correo' 
-          type='email'
-          name="email"
-          onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label>contrasenia</label>
-          <input 
-          placeholder='***********' 
-          type='password'
-          name="password"
-          onChange={handleChange}
-          />
-        </div>
-        <button >Registrate</button>
-      </form>
-
-      <div></div>
+    <div className="auth">
+      <div className='auth__container'>
+        {error && <p>{error}</p>}
+        {/* <div className='auth__container'> */}
+          <h2>Inicia sesion y descubre todos nuestros productos</h2>
+        {/* </div> */}
+        <form className="form" onSubmit={handleSubmit}>
+          <div className='signin'>Continuar con Google</div>
+          <div className='signin'>Continuar con facebook</div>
+          <div>
+            <label>Correo electronico</label><br/>
+            <input 
+            className='email input'
+            placeholder='Ingresa tu correo' 
+            type='email'
+            name="email"
+            onChange={handleChange}
+            />
+          </div>
+          <div>
+            <label>Contraseña</label><br/>
+            <input 
+            className='password input'
+            placeholder='Ingrasa tu contraseña' 
+            type='password'
+            name="password"
+            onChange={handleChange}
+            />
+          </div>
+          <button className='button'>Registrate</button>
+        </form>
+          <Link to="/">Olvidaste tu contraseña?</Link>
+      </div>
     </div>
   )
 }

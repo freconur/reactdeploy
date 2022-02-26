@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom'
 import '../styles/ModalProduct.css'
-import '../styles/res/ModalProduct_res.css'
+import '../styles/ModalProduct_res.css'
 const ModalProduct = ({ open, children, onClose }) => {
 	if(!open) return null;
 

@@ -1,11 +1,19 @@
-@media (min-width: 650px) {
-    .Menu {
+@media (max-width: 1024px) {
+    
+    .Navbar__container {
+        grid-template-columns: 1fr 4fr;
+	    grid-template-areas: 
+		"logo  userOption"
+        ;
+        justify-items: end;
+    }
+    .Navbar__list{
         display: none;
     }
 
 }
-@media (max-width: 650px) {
-    .Navbar__list--section {
+@media (max-width: 768px) {
+    .resgistration {
         display: none;
     }
     .Navbar__list--res {
@@ -15,10 +23,15 @@
     .Navbar__menuBurger {
         display: flex;
     }
-    .Menu {}
+    .Navbar__list {
+        min-width: 60%;
+    }
 
 }
 @media (max-width: 420px) {
+    .Navbar__list {
+        min-width: 60%;
+    }
     .Navbar__list--res {
         display: none;
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/Category.css'
-import '../styles/res/Category_responsive.css'
+import '../styles/Category_responsive.css'
 import tazasCategory from '../assets/images/tazasCategory.jpg';
 import cojinCategory from '../assets/images/cojinCategory.jpg';
 import polosCategory from '../assets/images/polosCategory.jpg';

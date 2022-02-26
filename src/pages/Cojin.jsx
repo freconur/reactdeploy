@@ -5,7 +5,7 @@ import ProductCard from "../components/ProductCard";
 // import ModalProduct from "../Modals/ModalProduct";
 // import Producto from "../components/Producto";
 import "../styles/productContainer.css";
-import '../styles/res/productContainer_res.css'
+import '../styles/productContainer_res.css'
 import PageLoading from "./PageLoading";
 const db = getFirestore(app)
 const Cojin = () => {

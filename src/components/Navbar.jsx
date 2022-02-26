@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css'
-import '../styles/res/Navbar_res.css'
 import {Link} from 'react-router-dom';
+import AuthButton from './AuthButton';
 import Logo from '../assets/images/waliky-logo.png'
 import iconMenu from '../assets/icons/bars-solid.svg'
+import { useAuth } from '../context/AuthContext';
+import UserName from './UserName';
+import NavbarList from './NavbarList';
+import '../styles/Navbar_res.css'
 
 const Navbar = () => {
 
-	const [toogle, setToogle] = useState(false)
+	const [toogle, setToogle] = useState(false);
+
+	const { user } = useAuth()
+	const userNavbar = user?.email;
 
 	const handleClick = () => {
 		setToogle(!toogle)
-		// setAddClass(true)
 	}
 
 	return (
@@ -22,17 +28,10 @@ const Navbar = () => {
 						<img className="Navbar-logo" src={Logo} alt="logo" />
 					</Link>
 				</div>
-				<div>
-					{/* <ul className={ setAddClass => addClass ? 'Navbar__list active' : 'Navbar__list' }> */}
-					<ul className="Navbar__list">
-					{/* <ul className={`Navbar__list ${toogle ? 'Navbar__list-active' : ''}`}> */}
-						<Link to='/' className="Navbar__list--section ">Blog</Link>
-						<Link to='/' className="Navbar__list--section">Contactanos</Link>
-						<Link to='/' className="Navbar__list--section ">Nosotros</Link>
-						<Link to='/registre' className="Navbar__list--section ">sign in</Link>
-						{/* <Link to='/' className="Navbar__list--section Navbar__list--res">inicia sesion</Link> */}
-					</ul>
-				</div>
+					<NavbarList />
+					<div className="userOption">
+						{userNavbar ? <UserName/> : <AuthButton />}
+					</div>
 			</div>
 			<div className="Navbar__menuBurger" onClick={handleClick}> 
 			{/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}

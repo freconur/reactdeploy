@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Footer.css';
 import '../assets/font/flaticon.css';
-import '../styles/res/Footer_res.css';
+import '../styles/Footer_res.css';
 const Footer = () => {
 	return (
 		<div className="Footer">

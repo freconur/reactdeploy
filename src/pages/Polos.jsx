@@ -3,7 +3,7 @@ import app from "../firebase/firebase.config"
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 import ProductCard from '../components/ProductCard'
 import "../styles/productContainer.css";
-import '../styles/res/productContainer_res.css'
+import '../styles/productContainer_res.css'
 import PageLoading from './PageLoading'
 const db = getFirestore(app);
 const Polos = () => {
@@ -26,7 +26,7 @@ const Polos = () => {
   }, [])
 
   return (
-      
+      <>
         <div className="container__prod" >
           <h1 className="product__title">Polos</h1>
           <div>
@@ -38,6 +38,7 @@ const Polos = () => {
             </ul>
           </div>
         </div>
+      </>
   )
 }
 

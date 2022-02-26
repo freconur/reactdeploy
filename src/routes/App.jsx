@@ -11,23 +11,25 @@ import AuthProvider from '../context/AuthContext';
 import LoginAccount from '../pages/LoginAccount';
 import UserDashBoard from '../pages/UserDashBoard';
 import ProtectedRoute from '../components/ProtectedRoute';
+import ScrollToUp from '../components/ScrollToUp';
+import UserDashboard2 from '../pages/UseDashboard2';
 
 const App = () => {
   return (
     <AuthProvider>
       <HashRouter>
+        <ScrollToUp/>
         <Layout>
           <Routes>
             <Route exact path="/" element={<Home/>} />
             <Route exact path="/user" element={
             <ProtectedRoute>
-              <UserDashBoard/>
+              <UserDashboard2/>
             </ProtectedRoute>
             }/>
-
             {/* <Route exact path="/modal" element={<ModalProduct/>} /> */}
             <Route exact path="/polos" element={<Polos/>} />
-            <Route exact path="/registre" element={<CreateAccount/>} />
+            <Route exact path="/signin" element={<CreateAccount/>} />
             <Route exact path="/login" element={<LoginAccount/>} />
             <Route exact path="/tazas" element={<Tazas/>} />
             <Route exact path="/cojin" element={<Cojin/>} />
